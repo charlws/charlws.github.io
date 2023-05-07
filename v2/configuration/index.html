@@ -1,0 +1,1511 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="CHub Support Team">
+      
+      
+      
+        <link rel="prev" href="../basics/">
+      
+      
+        <link rel="next" href="../customdomain/">
+      
+      <link rel="icon" href="../../assets/chub_favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.9">
+    
+    
+      
+        <title>Configuration - CHub Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a6bdf11c.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#prerequisites-for-this-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+              <button class="md-banner__button md-icon" aria-label="Don't show this again">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+              </button>
+            
+            
+   Welcome to the new docs devlopment preview. Please report any issues to sticks#2701. Do not share this site with anyone else
+   as it's not ready for public use yet. Thanks for your help with testing!
+
+          </div>
+          
+            <script>var content,el=document.querySelector("[data-md-component=announce]");el&&(content=el.querySelector(".md-typeset"),__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0))</script>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CHub Documentation" class="md-header__button md-logo" aria-label="CHub Documentation" data-md-component="logo">
+      
+  <img src="../../assets/chub_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CHub Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configuration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CHub Documentation" class="md-nav__button md-logo" aria-label="CHub Documentation" data-md-component="logo">
+      
+  <img src="../../assets/chub_logo.png" alt="logo">
+
+    </a>
+    CHub Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Getting started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../landing/" class="md-nav__link">
+        Start Here
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basics/" class="md-nav__link">
+        Setting Up The Basics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Configuration
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites-for-this-guide" class="md-nav__link">
+    Prerequisites for this guide
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-configuration" class="md-nav__link">
+    Basic Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-the-basics-setup" class="md-nav__link">
+    Getting the basics setup
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json-configuration-advanced" class="md-nav__link">
+    JSON Configuration (Advanced)
+  </a>
+  
+    <nav class="md-nav" aria-label="JSON Configuration (Advanced)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-json" class="md-nav__link">
+    What is JSON?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-information" class="md-nav__link">
+    Other Information
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-arrays" class="md-nav__link">
+    JSON Arrays
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-json-errors" class="md-nav__link">
+    Common JSON Errors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-json-lingo" class="md-nav__link">
+    Common JSON Lingo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-json" class="md-nav__link">
+    Configuration (JSON)
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration (JSON)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    Name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#language" class="md-nav__link">
+    Language
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distance-unit" class="md-nav__link">
+    Distance Unit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#privacy" class="md-nav__link">
+    Privacy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-level" class="md-nav__link">
+    Security Level
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hex-color" class="md-nav__link">
+    Hex Color
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logo-url" class="md-nav__link">
+    Logo URL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guild-id" class="md-nav__link">
+    Guild ID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#must-join-guild" class="md-nav__link">
+    Must Join Guild?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-server-nickname" class="md-nav__link">
+    Use Server Nickname?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allow-custom-profile" class="md-nav__link">
+    Allow Custom Profile?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avatar-domain-whitelist" class="md-nav__link">
+    Avatar Domain Whitelist
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-connections" class="md-nav__link">
+    Required Connections
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register-methods" class="md-nav__link">
+    Register Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tracker" class="md-nav__link">
+    Tracker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tracker-company-id" class="md-nav__link">
+    Tracker Company ID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tracker-api-key" class="md-nav__link">
+    Tracker API Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tracker-webhook-secret" class="md-nav__link">
+    Tracker Webhook Secret
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delivery-rules" class="md-nav__link">
+    Delivery Rules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delivery-log-channel-id" class="md-nav__link">
+    Delivery Log Channel ID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delivery-post-gifs" class="md-nav__link">
+    Delivery post gifs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discord-settings" class="md-nav__link">
+    Discord Settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Discord Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-discord-appbot" class="md-nav__link">
+    Creating the Discord App/Bot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-team-optional" class="md-nav__link">
+    Creating the team (optional)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-application" class="md-nav__link">
+    Creating the application
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linking-the-bot-to-chub" class="md-nav__link">
+    Linking the bot to CHub
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-the-bot-to-your-server" class="md-nav__link">
+    Adding the bot to your server
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-smtpemail-settings" class="md-nav__link">
+    Custom SMTP/Email Settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Custom SMTP/Email Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#email-templates" class="md-nav__link">
+    Email Templates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customdomain/" class="md-nav__link">
+        Custom Domain Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          About us
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          About us
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/intro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/features/" class="md-nav__link">
+        Features
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites-for-this-guide" class="md-nav__link">
+    Prerequisites for this guide
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-configuration" class="md-nav__link">
+    Basic Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-the-basics-setup" class="md-nav__link">
+    Getting the basics setup
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json-configuration-advanced" class="md-nav__link">
+    JSON Configuration (Advanced)
+  </a>
+  
+    <nav class="md-nav" aria-label="JSON Configuration (Advanced)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-json" class="md-nav__link">
+    What is JSON?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-information" class="md-nav__link">
+    Other Information
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-arrays" class="md-nav__link">
+    JSON Arrays
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-json-errors" class="md-nav__link">
+    Common JSON Errors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-json-lingo" class="md-nav__link">
+    Common JSON Lingo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-json" class="md-nav__link">
+    Configuration (JSON)
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration (JSON)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    Name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#language" class="md-nav__link">
+    Language
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distance-unit" class="md-nav__link">
+    Distance Unit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#privacy" class="md-nav__link">
+    Privacy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-level" class="md-nav__link">
+    Security Level
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hex-color" class="md-nav__link">
+    Hex Color
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logo-url" class="md-nav__link">
+    Logo URL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guild-id" class="md-nav__link">
+    Guild ID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#must-join-guild" class="md-nav__link">
+    Must Join Guild?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-server-nickname" class="md-nav__link">
+    Use Server Nickname?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allow-custom-profile" class="md-nav__link">
+    Allow Custom Profile?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avatar-domain-whitelist" class="md-nav__link">
+    Avatar Domain Whitelist
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-connections" class="md-nav__link">
+    Required Connections
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register-methods" class="md-nav__link">
+    Register Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tracker" class="md-nav__link">
+    Tracker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tracker-company-id" class="md-nav__link">
+    Tracker Company ID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tracker-api-key" class="md-nav__link">
+    Tracker API Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tracker-webhook-secret" class="md-nav__link">
+    Tracker Webhook Secret
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delivery-rules" class="md-nav__link">
+    Delivery Rules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delivery-log-channel-id" class="md-nav__link">
+    Delivery Log Channel ID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delivery-post-gifs" class="md-nav__link">
+    Delivery post gifs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discord-settings" class="md-nav__link">
+    Discord Settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Discord Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-discord-appbot" class="md-nav__link">
+    Creating the Discord App/Bot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-team-optional" class="md-nav__link">
+    Creating the team (optional)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-application" class="md-nav__link">
+    Creating the application
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linking-the-bot-to-chub" class="md-nav__link">
+    Linking the bot to CHub
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-the-bot-to-your-server" class="md-nav__link">
+    Adding the bot to your server
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-smtpemail-settings" class="md-nav__link">
+    Custom SMTP/Email Settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Custom SMTP/Email Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#email-templates" class="md-nav__link">
+    Email Templates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Configuration</h1>
+
+<h2 id="prerequisites-for-this-guide">Prerequisites for this guide</h2>
+<ul>
+<li>Followed the <a href="/docs/v2/basics">basic setup</a> guide</li>
+<li>20-30 minutes of your time</li>
+</ul>
+<h2 id="basic-configuration">Basic Configuration</h2>
+<h3 id="getting-the-basics-setup">Getting the basics setup</h3>
+<p>Now that you've created your VTC, you will need to configure it. To do this, go to the domain you chose for your VTC. You will be greeted with a page that looks like this:</p>
+<p><img alt="Welcome" src="https://img.sticks.ovh/APfBVTc8M" /></p>
+<p>Login with the credentials you created when you created your VTC. You will be greeted with a page that looks like this:</p>
+<p><img alt="Dashboard" src="https://img.sticks.ovh/wfC2CRN_Q" /></p>
+<p>Scroll down until you see the "Configuration" section - click it and then click the "Web" tab. You will be greeted with a page that looks like this:</p>
+<p><img alt="Web Config" src="https://img.sticks.ovh/NXpCTOMsN" /></p>
+<p>Fill out the form, note that Custom Application and Custom Style is not required. </p>
+<p><img alt="Web Config Filled" src="https://img.sticks.ovh/NXpCTOMsN" /></p>
+<div class="admonition note">
+<p class="admonition-title">Form Meanings</p>
+<p>Name, Distance Unit, Slogan, are self explanatory.</p>
+<p>Navio / TruckSim Company ID is the ID of your company on the respective platform. If you don't have a company on one of the platforms, you can leave it blank. This will be 
+covered in more detail later in this guide.</p>
+<p>Color is the accent color for your VTC. This is used in buttons and other places. </p>
+<p>Logo Download link is the link to your logo. If you don't have a logo, you can leave this blank.</p>
+<p>Banner download link is for the banner on your VTC page. If you don't have a banner, you can leave this blank.</p>
+<p>Custom Application and Custom Styles are advanced features and are not required. If you don't know what these are, you can leave them blank.</p>
+</div>
+<p>Click save to apply your changes.</p>
+<p>At this point, you do have a working VTC. However, <strong>we still recommend you continue with the rest of this guide</strong> to get the most out of your VTC with CHub - some features will not work without the rest of this guide.</p>
+<h2 id="json-configuration-advanced">JSON Configuration (Advanced)</h2>
+<div class="admonition warning">
+<p class="admonition-title">JSON Configuration is an advanced feature.</p>
+<p>This section allows you to configure your VTC in more detail. Please note that values and formatting are <strong>sensitive</strong>. If you are unsure of what you are doing, please ask in the support channel on discord. We are always happy to help.</p>
+</div>
+<h3 id="getting-started">Getting Started</h3>
+<p>On the configuration page, click the "API (JSON)" tab. You will be greeted with a page that looks like this:</p>
+<p><img alt="JSON Config" src="https://img.sticks.ovh/_-ClUhNSJ" /></p>
+<p>We will be going through each section of this page in detail. But first, a quick overview of how to use JSON and what it is.</p>
+<h3 id="what-is-json">What is JSON?</h3>
+<p>JSON is a data format that is used to store data in a human readable format. It is used by many applications and is very common. It is also used by CHub to store VTC information,
+such as the VTC name, slogan, etc. </p>
+<p>Here's an example of what JSON looks like:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;this&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;is&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;an&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>As you can see, it's very easy to read and understand. It's also very easy to write. Let's break down the above example.</p>
+<ol>
+<li>The first line is the opening of the JSON object (<code>{</code>) - this is required for all JSON objects.</li>
+<li>The first key appears on the second line (<code>foo</code>) - this is the name of the value. This is also required for all JSON objects. All keys are surrounded by quotes (<code>"</code>) - this is also required.</li>
+<li>The seperator between the first key and value is a colon (<code>:</code>) - this is required for all JSON objects.</li>
+<li>The first value (after <code>:</code>) is <code>bar</code> - this is the name of the value. This is also required for all JSON objects. All values are surrounded by quotes (<code>"</code>) - this is also required.</li>
+<li>After the end of the value, there is a comma (<code>,</code>) - this is required for all JSON objects except the last one. This is used to separate the key/value pairs.</li>
+<li>This process repeats until the last key/value pair.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">JSON Objects, Keys, Values and pairs</p>
+<p>JSON objects are surrounded by curly braces (<code>{}</code>) - this is required for all JSON objects.</p>
+<p>JSON keys are surrounded by quotes (<code>"</code>) - this is required for all JSON keys.</p>
+<p>JSON values are surrounded by quotes (<code>"</code>) - this is required for all JSON values.</p>
+<p>JSON key/value pairs are separated by commas (<code>,</code>) - this is required for all JSON key/value pairs except the last one.</p>
+<p>JSON Pairs also seprate on the line, using <code>:</code> - this is required for all JSON key/value pairs.</p>
+</div>
+<h3 id="other-information">Other Information</h3>
+<p>Here is some other information about JSON that you should know.</p>
+<h4 id="json-arrays">JSON Arrays</h4>
+<p>JSON Also includes arrays, which are used to store lists of data. Here's an example of what a JSON array looks like:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+<span class="w">  </span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;baz&quot;</span>
+<span class="p">]</span>
+</code></pre></div>
+<p>As you can see, it's very easy to read and understand. It's also very easy to write. Another example:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bar&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;bar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;baz&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<p>The rest of the guide will teach you how to use arrays, but this is just a quick overview of what they are.</p>
+<h4 id="common-json-errors">Common JSON Errors</h4>
+<p>JSON is very sensitive to formatting. If you make a mistake, it will not work. Here are some common errors:</p>
+<ol>
+<li>Missing a comma (<code>,</code>) - this is required for all JSON key/value pairs except the last one.</li>
+<li>Missing a quote (<code>"</code>) - this is required for all JSON keys and values.</li>
+<li>Missing a colon (<code>:</code>) - this is required for all JSON key/value pairs.</li>
+<li>Missing a curly brace (<code>{}</code>) - this is required for all JSON objects.</li>
+<li>Missing a square bracket (<code>[]</code>) - this is required for all JSON arrays.</li>
+</ol>
+<p>If you make a mistake, you can use the revert button to revert your changes. If you need to start over, you can use the "Reset" button at the bottom of the page. <strong>Remember to save your changes and reload the config/server after making changes!</strong></p>
+<h4 id="common-json-lingo">Common JSON Lingo</h4>
+<p><code>bool/boolean</code> - A boolean value is a value that is either <code>true</code> or <code>false</code>. This is used in JSON to represent a boolean value.</p>
+<p><code>int/integer</code> - An integer value is a value that is a number. This is used in JSON to represent a number.</p>
+<p><code>string</code> - A string value is a value that is a string. This is used in JSON to represent a string. All strings are surrounded by quotes (<code>"</code>).</p>
+<p><code>enum</code> - An enum value is a value that is a string. This is used in JSON to represent a string. All strings are surrounded by quotes (<code>"</code>). The value must be one of the values listed in the documentation. If you use a value that is not listed in the documentation, it will not work.</p>
+<p>Great! Now that we know what JSON is and how to use it, let's get started with the configuration.</p>
+<h2 id="configuration-json">Configuration (JSON)</h2>
+<div class="admonition warning">
+<p class="admonition-title">Please change values with care!</p>
+<p>Please note that some values are <strong>sensitive</strong> and changing them may break your VTC. The revert button can help you, or if you need to start over, you can use the "Reset" button at the bottom of the page. <strong>Remember to save your changes and reload the config/server after making changes!</strong></p>
+</div>
+<p>We will be going line-by line through the JSON configuration. Please note that some values are required and some are not. If a value is required, it will be marked as such.</p>
+<h3 id="name">Name</h3>
+<p><code>name</code> is the name of your VTC. This is displayed on the VTC page and in the application. This is a required field.</p>
+<h3 id="language">Language</h3>
+<div class="admonition note">
+<p class="admonition-title">Language codes</p>
+<p>Language codes are two letter codes that represent a language. For example, English is <code>en</code>, French is <code>fr</code>, etc. You can find a list of language codes <a href="https://www.andiamo.co.uk/resources/iso-language-codes/">here</a>.</p>
+</div>
+<p><code>language</code> is the two letter language code of your VTC. This is displayed on the VTC page and in the application. This is a required field.</p>
+<h3 id="distance-unit">Distance Unit</h3>
+<div class="admonition note">
+<p class="admonition-title">Possible Values</p>
+<p>Possible values are <code>metric</code> or <code>imperial</code>.</p>
+</div>
+<p><code>distance_unit</code> is the unit of distance your VTC uses. By default, most of the CHub application uses <strong>km</strong>, however if this is set to <code>imperial</code>, it will <strong>convert</strong> to <strong>miles</strong>. This is a required field.</p>
+<h3 id="privacy">Privacy</h3>
+<p><code>privacy</code> (TBD)</p>
+<h3 id="security-level">Security Level</h3>
+<p><code>security_level</code> (TBD)</p>
+<h3 id="hex-color">Hex Color</h3>
+<p><code>hex_color</code> is the hex color of your VTC. This is used in buttons and other places. This is a required field.</p>
+<p>Example: </p>
+<p><img alt="Hex Color" src="https://img.sticks.ovh/24S3_drCh" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In this example, the hex color is <code>#0000FF</code> - this is the value you would put in the JSON configuration. </p>
+</div>
+<h3 id="logo-url">Logo URL</h3>
+<p><code>logo_url</code> is the URL to your VTC logo. This is displayed on the VTC page. This is a required field.</p>
+<h3 id="guild-id">Guild ID</h3>
+<div class="admonition note">
+<p class="admonition-title">Conditional Require/Information</p>
+<p>This is only required if you plan to use discord features of CHub. If you don't know how to get your guild ID, please see <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">this</a> article on how to get your guild ID.</p>
+</div>
+<p><code>guild_id</code> is the ID of your discord server. This is used to link your discord server to your VTC.</p>
+<h3 id="must-join-guild">Must Join Guild?</h3>
+<div class="admonition note">
+<p class="admonition-title">Possible Values</p>
+<p>Possible values are <code>true</code> or <code>false</code>.</p>
+</div>
+<p><code>must_join_guild</code> is a boolean value that determines if users must join your discord server to use your VTC. </p>
+<h3 id="use-server-nickname">Use Server Nickname?</h3>
+<div class="admonition note">
+<p class="admonition-title">Possible Values</p>
+<p>Possible values are <code>true</code> or <code>false</code>.</p>
+</div>
+<p><code>use_server_nickname</code> is a boolean value that determines if CHub should use the user's discord nickname or their username set inside of CHub.</p>
+<h3 id="allow-custom-profile">Allow Custom Profile?</h3>
+<div class="admonition note">
+<p class="admonition-title">Possible Values</p>
+<p>Possible values are <code>true</code> or <code>false</code>.</p>
+</div>
+<p><code>allow_custom_profile</code> is a boolean value that determines if users can set a custom profile. If this is set to <code>false</code>, users will not be able to set a custom profile.</p>
+<h3 id="avatar-domain-whitelist">Avatar Domain Whitelist</h3>
+<p><code>avatar_domain_whitelist</code> is a list of domains that users can use for their avatar. If a user tries to use an avatar from a domain that is not in this list, it will be rejected. This is a required field.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+<span class="w">  </span><span class="s2">&quot;https://cdn.discordapp.com&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;https://cdn.discord.com&quot;</span>
+<span class="p">]</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If this list is empty, users will not be able to set an avatar. Please make sure this has a good amount of common URLs in it to allow freedom for users to set their avatar.</p>
+</div>
+<h3 id="required-connections">Required Connections</h3>
+<div class="admonition note">
+<p class="admonition-title">Possible ENUM Values</p>
+<p>Possible values are <code>discord</code>, <code>truckersmp</code>, and <code>email</code></p>
+</div>
+<p><code>required_connections</code> is a list of connections that users must have to use your VTC. If a user does not have one of these connections, they will need to link or their account will 
+be limited. This is a required field.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+<span class="w">  </span><span class="s2">&quot;discord&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;truckersmp&quot;</span>
+<span class="p">]</span>
+</code></pre></div>
+<p>In this example, users will need to have discord and truckersmp linked to use the VTC. Please be sure to use only the values listed above. If you use a value that is not listed above, it will not work.</p>
+<h3 id="register-methods">Register Methods</h3>
+<div class="admonition note">
+<p class="admonition-title">Possible ENUM Values</p>
+<p>Possible values are <code>discord</code>, <code>steam</code>, and <code>email</code></p>
+</div>
+<p>This is almost the same as <code>required_connections</code>, however this is used for the registration page. This is a required field.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+<span class="w">  </span><span class="s2">&quot;discord&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;steam&quot;</span>
+<span class="p">]</span>
+</code></pre></div>
+<p>In this example, users will be able to register with discord and steam. Please be sure to use only the values listed above. If you use a value that is not listed above, it will not work.</p>
+<h3 id="tracker">Tracker</h3>
+<div class="admonition warning">
+<p class="admonition-title">Only one option currently available</p>
+<p>Due to navio shutting down, this should always be <code>tracksim</code></p>
+</div>
+<p><code>tracker</code> is the tracker that your VTC uses. This is used to track jobs and mileage. This is a required field.</p>
+<h3 id="tracker-company-id">Tracker Company ID</h3>
+<div class="admonition note">
+<p class="admonition-title">Conditional Require/Information</p>
+<p>This is only required if you plan to use the tracker features of CHub. If you don't know how to get your company ID, please see <a href="https://docs.tracksim.app/docs/company-id">this</a> article on how to get your company ID.</p>
+</div>
+<p><code>tracker_company_id</code> is the ID of your company on the tracker. This is a required field.</p>
+<h3 id="tracker-api-key">Tracker API Key</h3>
+<div class="admonition note">
+<p class="admonition-title">Conditional Require/Information</p>
+<p>This is only required if you plan to use the tracker features of CHub. If you don't know how to get your API key, please see <a href="https://docs.tracksim.app/docs/api/authentication">this</a> article on how to get your API key.</p>
+</div>
+<p><code>tracker_api_key</code> is the API key of your company on the tracker. This is a required field.</p>
+<h3 id="tracker-webhook-secret">Tracker Webhook Secret</h3>
+<p><code>tracker_webhook_secret</code> (TBD)</p>
+<h3 id="delivery-rules">Delivery Rules</h3>
+<p><code>delivery_rules</code> (TBD)</p>
+<h3 id="delivery-log-channel-id">Delivery Log Channel ID</h3>
+<div class="admonition note">
+<p class="admonition-title">Conditional Require/Information</p>
+<p>This is only required if you plan to use the tracker features of CHub. If you don't know how to get your channel ID, please see <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">this</a> article on how to get your channel ID.</p>
+</div>
+<p><code>delivery_log_channel_id</code> is the ID of the channel you want to log deliveries to. </p>
+<h3 id="delivery-post-gifs">Delivery post gifs</h3>
+<div class="admonition note">
+<p class="admonition-title">Conditional Require</p>
+<p>This is only required if you plan to use the tracker features of CHub.</p>
+</div>
+<p><code>delivery_post_gifs</code> is a list of gifs to post in the embed along with the delivery. This is a required field. We already include some gifs for you, but you can add more if you'd like. Most people will not need to change this.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+<span class="w">  </span><span class="s2">&quot;https://c.tenor.com/fjTTED8MZxIAAAAC/truck.gif&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;https://c.tenor.com/QhMgCV8uMvIAAAAC/airtime-weeee.gif&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+</code></pre></div>
+<h3 id="discord-settings">Discord Settings</h3>
+<div class="admonition warning">
+<p class="admonition-title">This module must be followed in it's entirety to work properly.</p>
+<p>This section is for discord settings. This is required if you plan to use discord features of CHub. If you do not plan to use discord features of CHub, you can skip this section.</p>
+</div>
+<p><code>discord_client_id</code>, <code>discord_client_secret</code>, <code>discord_bot_token</code> are all used for discord integration. These are required fields.</p>
+<h4 id="creating-the-discord-appbot">Creating the Discord App/Bot</h4>
+<p>First, Go to <a href="https://discord.com/developers">discord.com/developers</a> and login with your discord account.</p>
+<div class="admonition note">
+<p class="admonition-title">Team Recommended</p>
+<p>We recommend creating a team for your VTC. This will allow you to add other members of your VTC to the discord app. This is not required, but recommended for 
+higher ranks to edit the bot/applications.</p>
+</div>
+<h4 id="creating-the-team-optional">Creating the team (optional)</h4>
+<p>If creating a team, click "Teams", and the new button. You'll see a popup like this:</p>
+<p><img alt="New Team Creation" src="https://img.sticks.ovh/MdMscu6iU" /></p>
+<p>Fill out the form and click "Create Team". You'll be greeted with a page that looks like this:
+<img alt="Team Dash" src="https://img.sticks.ovh/zFuMs6Ojr" /></p>
+<p>Be sure to add people to the team, aswell as add a logo to it.</p>
+<h4 id="creating-the-application">Creating the application</h4>
+<p>Go back to the <a href="https://discord.com/developers/applications">applications page</a> and click "New Application". You'll see a popup like this:</p>
+<p><img alt="New App Creation" src="https://img.sticks.ovh/u9ryfFo3O" /></p>
+<p>Fill out the form and click "Create". If using a team, make sure to select it from the dropdown. You'll be greeted with a page that looks like this after creation:</p>
+<p><img alt="App Dash" src="https://img.sticks.ovh/6hB4lAiVL" /></p>
+<p>Fill out the Description field to something that makes sense to you. Save, and click the "Bot" tab. You'll be greeted with a page that looks like this:</p>
+<p><img alt="Bot Dash" src="https://img.sticks.ovh/w7wDMIOVl" /></p>
+<p>On this page, you need to do the following:</p>
+<ol>
+<li>Click "Reset Token" and confirm the popup. This will generate a new token for your bot. <strong>You will need this later.</strong></li>
+<li>Make sure all intents are enabled </li>
+<li>Make sure the bot is public</li>
+</ol>
+<h4 id="linking-the-bot-to-chub">Linking the bot to CHub</h4>
+<p>Now with the bot created, we need to link it to CHub. Click on the OAuth2 tab. You'll be greeted with a page that looks like this:</p>
+<p><img alt="OAuth2 Dash" src="https://img.sticks.ovh/rDZ9Lq-WM" /></p>
+<p>On this page, you need to do the following:</p>
+<ol>
+<li>Copy the Client ID and paste it into the <code>discord_client_id</code> field in the JSON configuration.</li>
+<li>Click "Reset Secret" and confirm the popup. Then paste the secret into the <code>discord_client_secret</code> field in the JSON configuration.</li>
+<li>Paste the bot token into the <code>discord_bot_token</code> field in the JSON configuration.</li>
+</ol>
+<p>After that, you can close the discord developer portal and save the JSON configuration, reload, and then click "Activate Discord Role Connection" on the configuration page. You should see a popup like this:</p>
+<p>(TBD)</p>
+<h4 id="adding-the-bot-to-your-server">Adding the bot to your server</h4>
+<p>Now that the bot is linked to CHub, we need to add it to your server. To do this, go back to the <a href="https://discord.com/developers/applications">applications page</a> and click on your application. Click the "OAuth2" tab and you'll be greeted with a page that looks like this:</p>
+<p><img alt="OAuth2 Dash" src="https://img.sticks.ovh/rDZ9Lq-WM" /></p>
+<p>Click the "URL Generator" page, and select the following below:</p>
+<p><img alt="URL Generator" src="https://img.sticks.ovh/3h4mGPktD" /></p>
+<p>Scroll down, click "Copy" and paste the URL into your browser. Choose your server and click "Authorize" - the bot should now be in your server.</p>
+<h3 id="custom-smtpemail-settings">Custom SMTP/Email Settings</h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is a fairly advanced feature. Most VTCs can leave this blank.</p>
+</div>
+<p><code>smtp_host</code>, <code>smtp_port</code>, <code>smtp_email</code>, <code>smtp_password</code>, <code>smtp_passwd</code>, are all used for SMTP integration. These are required fields if you plan to use SMTP integration.</p>
+<p>Set these values to the values of your SMTP server. If you don't know what these are, please contact your email provider.</p>
+<h4 id="email-templates">Email Templates</h4>
+<p><code>email_template</code> is a list of email templates that are used for sending emails. This is a required field.</p>
+<p>The three templates are:</p>
+<ul>
+<li>
+<p><code>register</code></p>
+</li>
+<li>
+<p><code>update_email</code></p>
+</li>
+<li>
+<p><code>reset_password</code></p>
+</li>
+</ul>
+<p>Each template has a <code>subject</code>, <code>from_email</code>, <code>html</code> and <code>plain</code> field. These are all required fields.</p>
+<p><code>subject</code> is the subject of the email. This is a required field.</p>
+<p><code>from_email</code> is the email address the email is from. This is a required field.</p>
+<p><code>html</code> is the HTML version of the email. This is a required field.</p>
+<p><code>plain</code> is the plain text version of the email. This is a required field.</p>
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81Z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14Z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Thanks for your feedback! We'll try to improve this page. If you want to give more feedback, please let us know in  <a href="https://discord.gg/gaVS7scSD2">Discord</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; CHUB 2023
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.indexes", "navigation.tracking", "navigation.sections", "search.suggest", "search.share", "announce.dismiss"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      
+    
+  </body>
+</html>
