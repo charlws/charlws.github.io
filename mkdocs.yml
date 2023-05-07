@@ -1,0 +1,75 @@
+# Basic information
+site_name: CHub Documentation
+site_author: CHub Support Team
+
+# Copyright
+copyright: Copyright &copy; CHUB 2023
+
+# Theme Settings
+theme:
+  name: material
+  custom_dir: overrides
+  logo: assets/chub_logo.png
+  favicon: assets/chub_favicon.png
+  palette:
+    scheme: slate
+  features:
+    # Navigation Features
+    - navigation.top
+    - navigation.indexes 
+    - navigation.tracking
+    - navigation.sections
+    # Search Features
+    - search.suggest
+    - search.share
+    # Header
+    - announce.dismiss
+
+
+# Plugin Config
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;' # Custom separator for search, don't change it.
+      lang: 
+        - en
+
+# Navigation
+nav:
+  - Home: index.md
+  - Getting started:
+    - 'Start Here': v2/landing.md
+    - 'Setting Up The Basics': v2/basics.md
+    - 'Configuration': v2/configuration.md
+    - 'Custom Domain Setup': v2/customdomain.md
+  - About us:
+    -  'Introduction': about/intro.md
+    - 'Features': about/features.md
+
+# Markdown Extensions
+markdown_extensions:
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji 
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+# Extras
+extra:
+  analytics: 
+    feedback: # Was this page helpful? Prompt
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >- 
+            Thanks for your feedback! We'll try to improve this page.
+            If you want to give more feedback, please let us know in 
+            <a href="https://discord.gg/gaVS7scSD2">Discord</a>.
+
